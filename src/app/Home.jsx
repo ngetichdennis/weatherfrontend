@@ -5,6 +5,7 @@ import {
     ResizablePanelGroup,
   } from "@/components/ui/resizable"
 import { Searchbar } from "./Searchbar"
+import { Forecast } from "./Forecast"
   export function Homepanel() {
     return (
       <div className="m-4 h-[calc(100vh-2rem)] rounded-xl shadow-lg overflow-hidden">
@@ -20,6 +21,7 @@ import { Searchbar } from "./Searchbar"
           <ResizableHandle withHandle />
           <ResizablePanel defaultSize={80}>
             <Searchbar/>
+            <Forecast/>
             
           </ResizablePanel>
         </ResizablePanelGroup>
