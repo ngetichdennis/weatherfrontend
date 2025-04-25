@@ -67,3 +67,4 @@ The app should now be running at http://localhost:3000. Open this URL in your br
 Make sure the backend API is running and accessible at the provided base URL.
 
 The project uses Tailwind CSS for styling. You can customize the look and feel by editing the Tailwind configuration or modifying the components directly.
+## The sample look of the application is at the public folder in the project directory
