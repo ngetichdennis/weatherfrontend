@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Searchbar } from "./Searchbar";
 import { Forecast } from "./Forecast";
 import { Windhumid } from "./Windhumid";
+import { CurrentWeather } from "./CurrentWeather";
 
 export function Homepanel() {
   const [city, setCity] = useState("Nairobi");
@@ -12,8 +13,8 @@ export function Homepanel() {
   return (
     <div className="h-screen w-screen flex flex-row bg-gradient-to-br text-black">
       {/* Sidebar Panel (Left) */}
-      <div className="w-1/5 min-w-[150px] flex items-center justify-center p-4 bg-gray-100">
-        <span className="font-semibold text-lg">Menu</span>
+      <div className="w-1/5 min-w-[150px] p-4 bg-gray-100 flex flex-col justify-between">
+      <CurrentWeather city={city} unit={unit} />
       </div>
 
       {/* Main Content Panel (Right) */}
