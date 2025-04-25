@@ -1,9 +1,14 @@
 
+"use client"
+import { useState } from "react";
 import { Searchbar } from "./Searchbar";
 import { Forecast } from "./Forecast";
 import { Windhumid } from "./Windhumid";
 
 export function Homepanel() {
+  const [city, setCity] = useState("Nairobi");
+  const [unit, setUnit] = useState("metric");
+
   return (
     <div className="h-screen w-screen flex flex-row bg-gradient-to-br text-black">
       {/* Sidebar Panel (Left) */}
@@ -15,17 +20,13 @@ export function Homepanel() {
       <div className="w-4/5 flex flex-col p-4 overflow-auto">
         {/* Search Bar Section */}
         <div className="w-full flex justify-center mb-4">
-          <Searchbar />
+          <Searchbar unit={unit} onUnitChange={setUnit} onSearch={setCity} />
         </div>
 
-        {/* Forecast and Wind/Humidity vertically stacked with tighter spacing */}
-        <div >
-          <div >
-            <Forecast />
-          </div>
-          <div>
-            <Windhumid />
-          </div>
+        {/* Forecast and Wind/Humidity */}
+        <div>
+          <Forecast city={city} unit={unit} />
+          <Windhumid city={city} unit={unit} />
         </div>
       </div>
     </div>
