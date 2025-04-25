@@ -1,4 +1,3 @@
-
 import * as React from "react"
 
 import {
@@ -9,9 +8,9 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-export function Forecast() {
+export function Windhumid() {
   return (
-    <div className=" flex p-4 ">
+    <div className="flex p-4 ">
       {/* Adjusted card width and height */}
       <Card className="w-full max-w-xs h-[250px] m-4 rounded-2xl shadow-xl">
         <CardHeader className="items-center text-center">
@@ -23,7 +22,7 @@ export function Forecast() {
           </div>
         </CardContent>
         <CardFooter className="flex justify-center space-x-2">
-          temperatures
+        Humid
         </CardFooter>
       </Card>
     </div>
